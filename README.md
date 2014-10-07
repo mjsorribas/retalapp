@@ -1,3 +1,8 @@
+A work flow for make the programmer life more easy and fun PHP, MySQL, Yiiframework, Slim. Really fast Really fun!! 
+[http://retalapp.com/](http://retalapp.com/)
+
+[![An example here](http://img.youtube.com/vi/cmhadEStBAw/0.jpg)](http://www.youtube.com/watch?v=cmhadEStBAw)
+
 # How to Install? #
 
 ## Step 1 Download ##
@@ -100,3 +105,7 @@ sudo chmod -R 775 myprojectname/protected/runtime
 sudo chmod -R 775 myprojectname/assets
 sudo chmod -R 775 myprojectname/uploads
 ```
+
+
+# License #
+Retalapp is open source
