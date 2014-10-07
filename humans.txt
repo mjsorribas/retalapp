@@ -1,0 +1,19 @@
+﻿# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+ <Gustavo Salgado> -- <Back-end> -- <gsalgadotoledo@gmail.com>
+ <name> -- <role> -- <mail>
+
+# THANKS
+
+    <Gustavo Salgado>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Normalize
+    Javascript, jQuery, Modernizr
+    Selectivizr
+ 
+

@@ -1,0 +1,1 @@
+<?php echo $model->editor_text_html?>
