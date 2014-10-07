@@ -1,8 +1,7 @@
 Retalapp is a workflow for make your projects really fast!!
 [http://retalapp.com/](http://retalapp.com/)
 
-[(http://img.youtube.com/vi/cmhadEStBAw/0.jpg)](http://www.youtube.com/watch?v=cmhadEStBAw)
-YT(http://www.youtube.com/watch?v=cmhadEStBAw, print = TRUE)
+[http://img.youtube.com/vi/cmhadEStBAw/0.jpg](http://www.youtube.com/watch?v=cmhadEStBAw)
 
 # How to Install? #
 
