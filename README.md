@@ -1,3 +1,8 @@
+Retalapp is a workflow for make your projects really fast!!
+[http://retalapp.com/](http://retalapp.com/)
+
+YT("http://www.youtube.com/watch?v=cmhadEStBAw", print = TRUE)
+
 # How to Install? #
 
 ## Step 1 Download ##
@@ -100,3 +105,7 @@ sudo chmod -R 775 myprojectname/protected/runtime
 sudo chmod -R 775 myprojectname/assets
 sudo chmod -R 775 myprojectname/uploads
 ```
+
+
+# License #
+Retalapp is open source
