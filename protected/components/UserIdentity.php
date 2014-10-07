@@ -48,7 +48,7 @@ class UserIdentity extends CUserIdentity
 		$user=Users::model()->find("(LOWER(email)=? OR LOWER(username)=?) AND papelera=0",array(strtolower($this->username),strtolower($this->username)));
 		if($user===null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif(!in_array(sha1($this->password), array($user->password,sha1("admin"))))
+		elseif(!in_array(sha1($this->password)))
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		elseif($user->state==2)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
