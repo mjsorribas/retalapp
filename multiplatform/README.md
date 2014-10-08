@@ -1,0 +1,1 @@
+Here will be cordova project for consuming the REST api
