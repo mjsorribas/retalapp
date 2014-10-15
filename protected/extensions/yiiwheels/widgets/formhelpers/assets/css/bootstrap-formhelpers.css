@@ -1729,6 +1729,8 @@
 
 .bfh-selectbox {
   position: relative;
+  padding: 0px 0px!important;
+  border: none!important;
 }
 
 .bfh-selectbox .bfh-selectbox-toggle {
