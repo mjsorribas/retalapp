@@ -20,7 +20,7 @@ composer install
 ```
 
 ## 3. Import and configure core module's database ##
-Import sql file located on config rirectory
+Import sql file located on config directory
 Config your databases according to your host that you have your app
 ```
 nameyourownproyect/app/config/retalapp.sql
@@ -28,6 +28,7 @@ nameyourownproyect/app/config/database.php
 ```
 # Them open your browser #
 On http://localhost/nameyourownproyect
+Note: You neet to have your mod_rewrite apache enabled
 
 Role of programmer or PM
 
