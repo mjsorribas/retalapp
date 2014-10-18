@@ -1,1 +1,0 @@
-Here will be angular project for consuming the REST api

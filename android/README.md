@@ -1,1 +1,0 @@
-Here will be android project for consuming the REST api
