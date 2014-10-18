@@ -30,23 +30,29 @@ nameyourownproyect/app/config/database.php
 On http://localhost/nameyourownproyect
 Note: You neet to have your mod_rewrite apache enabled
 
-Role of programmer or PM
+Role of programmer or PM, Settings might not see the admin
+#### Username #### 
+root@email.com 
+#### Password #### 
+root
+ 
+ 
 
-root@email.com settings might not see the admin 
-root 
+Role of customer business page, You can see the minimum options required to manage content
+#### Username #### 
+admin@email.com 
+#### Password #### 
+admin
+ 
 
-Role of customer business page
+Role normal user (Front) entering the safe zone, User page (this does not have access to back) 
+#### Username #### 
+user@email.com
+#### Password #### 
+user
+ 
 
-admin@email.com You can see the minimum options required to manage content 
-admin 
-
-Role normal user (Front) entering the safe zone
-
-user@email.com User page (this does not have access to back) 
-user 
-
-
-# About permissoms #
+# About Systems permissoms #
 
 If you are using Mac(OS) or Linux you need to give some permissions
 ```
