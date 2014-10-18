@@ -31,26 +31,13 @@ On http://localhost/nameyourownproyect
 Note: You neet to have your mod_rewrite apache enabled
 
 Role of programmer or PM, Settings might not see the admin
-#### Username #### 
-root@email.com 
-#### Password #### 
-root
- 
- 
+Username: root@email.com, Password: root
 
 Role of customer business page, You can see the minimum options required to manage content
-#### Username #### 
-admin@email.com 
-#### Password #### 
-admin
- 
+Username: admin@email.com, Password: admin
 
 Role normal user (Front) entering the safe zone, User page (this does not have access to back) 
-#### Username #### 
-user@email.com
-#### Password #### 
-user
- 
+Username: user@email.com, Password: user
 
 # About Systems permissoms #
 
