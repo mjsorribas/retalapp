@@ -39,7 +39,7 @@ Username: admin@email.com, Password: admin
 Role normal user (Front) entering the safe zone, User page (this does not have access to back) 
 Username: user@email.com, Password: user
 
-# About Systems permissoms #
+# About Systems permissions #
 
 If you are using Mac(OS) or Linux you need to give some permissions
 ```
