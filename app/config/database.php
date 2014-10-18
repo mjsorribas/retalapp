@@ -4,7 +4,7 @@ return array(
         'connectionString' => 'mysql:host=localhost;dbname=retalapp',
         'emulatePrepare' => true,
         'username' => 'root',
-        'password' => 'decipher10',
+        'password' => '',
         'charset' => 'utf8',
     ),
     'yourdomain.com'=>array(

@@ -44,6 +44,7 @@ Username: user@email.com, Password: user
 If you are using Mac(OS) or Linux you need to give some permissions
 ```
 sudo chmod -R 777 nameyourownproyect/app/logs 
+sudo chmod -R 777 nameyourownproyect/app/modules 
 sudo chmod -R 777 nameyourownproyect/assets
 sudo chmod -R 777 nameyourownproyect/uploads
 ```
@@ -54,6 +55,7 @@ sudo chown -R nameyouruser:wwworapachegroup nameyourownproyect
 
 # And then you just give 775 access 
 sudo chmod -R 775 nameyourownproyect/app/logs 
+sudo chmod -R 775 nameyourownproyect/app/modules 
 sudo chmod -R 775 nameyourownproyect/assets
 sudo chmod -R 775 nameyourownproyect/uploads
 ```
