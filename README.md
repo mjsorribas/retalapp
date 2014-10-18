@@ -7,16 +7,14 @@ We we're documenting, will be back soon
 
 # How to Install? #
 
-## 1. Clone this repo or make a Fork for start on github you project ##
+## 1. Clone this repo or make a Fork for start on github your project ##
 ```
-#!bash
 git clone https://github.com/gsalgadotoledo/retalapp.git nameyourownproyect
 ```
 
 ## 2. Install dependencies ##
 You need to install [composer](https://getcomposer.org/download/) like global on your machine 
 ```
-#!bash
 cd nameyourownproyect/app
 composer install
 ```
@@ -25,7 +23,6 @@ composer install
 Import sql file located on config rirectory
 Config your databases according to your host that you have your app
 ```
-#!bash
 nameyourownproyect/app/config/retalapp.sql
 nameyourownproyect/app/config/database.php
 ```
@@ -52,7 +49,6 @@ user
 
 If you are using Mac(OS) or Linux you need to give some permissions
 ```
-#!bash
 sudo chmod -R 777 nameyourownproyect/app/logs 
 sudo chmod -R 777 nameyourownproyect/assets
 sudo chmod -R 777 nameyourownproyect/uploads
@@ -60,7 +56,6 @@ sudo chmod -R 777 nameyourownproyect/uploads
 
 If you want to be more carefully use the group of apache process and give just 775
 ```
-#!bash
 sudo chown -R nameyouruser:wwworapachegroup nameyourownproyect
 
 # And then you just give 775 access 
