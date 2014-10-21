@@ -41,53 +41,12 @@ class HomeModule extends Module
 
 	///////////////////////////////////////////////
 	// The follow methos are in order to         //
-	// Enabled API documentation                 //
-	///////////////////////////////////////////////
-	
-	/*
-	 * Examples in order to show API
-	public function builtDocApi()
-	{
-		return array(
-			array(
-				'url'=>$this->id.'/api_controller/',
-				'method'=>'POST',
-				'action'=>'This action is for retrive all info fro current token user',
-				'params'=>array(
-				    array(
-				    	'name'=>'param1',
-				    	'description'=>'This params is required',
-				    	'defaultValue'=>12,
-				    	'required'=>true,
-			    	),
-				),
-				'example_request'=>array(
-					"message"=>"Some summary message",
-					"param1"=>"2"
-				),
-				'success_response'=>array(
-					"action"=>"The action (e.g. \"barn-unlock\")",
-					"success"=>true,
-					"message"=>"Some summary message",
-					"data"=>"A raw, related piece of data if applicable"
-				),
-				'error_response'=>array(
-				    "error"=> "A key (e.g. access_denied) for the error",
-				    "error_description"=> "A longer description of the error"
-				),
-			),
-			// ....	
-		);
-	}
-	*/
-
-	///////////////////////////////////////////////
-	// The follow methos are in order to         //
 	// Enabled menues on the left side bar admin //
 	///////////////////////////////////////////////
 
 	/*
 	 * Examples in order to show reports in dashboard
+	*/
 	public function dashboardCounters()
 	{
 		return array(
@@ -112,6 +71,5 @@ class HomeModule extends Module
 		// and create your own html for report
 		return '<em>Hola orders</em>';
 	}
-	*/
 	
 }

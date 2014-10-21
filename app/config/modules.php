@@ -7,9 +7,17 @@ return array(
      */
     'admin' => array(
         'class' => 'core.extensions.modules.admin.AdminModule',
+        // Este parametro lo reciben todos los módulos
+        // y es para ocultar el menu lateral en el cms
         // 'showMenuFromAdmin'=>false,
     ),
     
+    /*
+     * Modulo que se llama por defecto cuando
+     * se accede al la petición / 
+     * este módulo esta unicado en la carpeta modules del proyecto
+     * inicial pero pued ser rremplazado por el módulo que tu quieras
+    */
     'home'=>array(
         'class'=>'app.modules.home.HomeModule',
         // 'showMenuFromAdmin'=>false,
@@ -39,28 +47,36 @@ return array(
         'enableOAuth' => true,
         // 'enableModals' => false,
         // 'usersModalsPath' => 'webroot.themes.yourtheme.views.layouts._users_modals',
-
         // 'showMenuFromAdmin'=>false,
         // 'labelMenu' => 'Usuarios',
     ),
     
-    /*
-     * Modulo para almacenar las variables de cofigursción general de la applicacion
+    /**
+     * Modulo para almacenar las variables de configuración 
+     * general de la applicacion y que siempre debe estar incluido en 
+     * la configuración para ver las opciones que acepta para personalizarlo
+     * puedes ver los atributos publicos de la clase SettingsModule
      */
     'settings' => array(
         'class' => 'core.extensions.modules.settings.SettingsModule',
         // 'showMenuFromAdmin'=>false,
     ),
 
+    /**
+     * Este es el módulo encargado del envío de 
+     * correos y como de la configuración de smtp 
+    */
     'smtp'=>array(
         'class'=>'core.extensions.modules.smtp.SmtpModule',
+        'colorTemplate'=>'#1f535c',
+        'colorFontTemplate'=>'#8ea9ae',
         // 'showMenuFromAdmin'=>false,
     ),
 
-    /*
-     * Modulo para generar código
-     * este solo se muestra en ambiente local no en 
-     * producción
+    /**
+     * Modulo para generar código este solo 
+     * se muestra en ambiente 
+     * local no en producción
      */
     'gii' => array(
         'class' => 'core.extensions.modules.gii.GiiModule',
@@ -68,31 +84,4 @@ return array(
         'ipFilters' => array('127.0.0.1', '::1'),
         'showMenuFromAdmin'=>YII_DEBUG,
     ),
-
-    /*
-     * Modulo para generar código
-     * este solo se muestra en ambiente local no en 
-     * producción
-     */
-    // 'database' => array(
-    //     'class' => 'core.extensions.modules.database.DatabaseModule',
-    //     // If removed, Gii defaults to localhost only. Edit carefully to taste.
-    //     'hosts' => array(
-    //         'localhost'=>array(
-    //             'connectionString' => 'mysql:host=localhost;dbname=retalapp',
-    //             'emulatePrepare' => true,
-    //             'username' => 'root',
-    //             'password' => 'decipher10',
-    //             'charset' => 'utf8',
-    //         ),
-    //         'yourdomain.com'=>array(
-    //             'connectionString' => 'mysql:host=localhost;dbname=retalapp',
-    //             'emulatePrepare' => true,
-    //             'username' => 'myusername',
-    //             'password' => 'mypassword',
-    //             // 'schemaCachingDuration' => (3600*24*8), // guarda los metadatas en cache
-    //             'charset' => 'utf8',
-    //         ),
-    //     )
-    // ),
 );

@@ -1,0 +1,16 @@
+RewriteEngine on
+
+# This is for OAuth2 Implementation of "Authorization" parameter
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+# This is for uploader pluging
+# php_value post_max_size 100M
+# php_value upload_max_filesize 100M
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
