@@ -11,4 +11,6 @@ if(in_array($_SERVER['HTTP_HOST'],$ipTest))
 	defined('YII_DEBUG') or define('YII_DEBUG',true);
 }
 $retalapp=dirname(__FILE__).'/../vendor/retalapp/core/bootstrap.php';
+Yii::setPathOfAlias('app',dirname(__FILE__).'/../app');
+Yii::setPathOfAlias('public',dirname(__FILE__));
 require_once($retalapp);
