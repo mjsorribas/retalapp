@@ -15,7 +15,7 @@ git clone https://github.com/gsalgadotoledo/retalapp.git nameyourownproyect
 ## 2. Install dependencies ##
 You need to install [composer](https://getcomposer.org/download/) like global on your machine 
 ```
-cd nameyourownproyect/app
+cd nameyourownproyect
 composer install
 ```
 
@@ -43,10 +43,10 @@ Username: user@email.com, Password: user
 
 If you are using Mac(OS) or Linux you need to give some permissions
 ```
-sudo chmod -R 777 nameyourownproyect/app/logs 
-sudo chmod -R 777 nameyourownproyect/app/modules 
-sudo chmod -R 777 nameyourownproyect/assets
-sudo chmod -R 777 nameyourownproyect/uploads
+sudo chmod -R 777 nameyourownproyect/app/storage 
+sudo chmod -R 777 nameyourownproyect/app/modules // this is just for develop stage for generator code
+sudo chmod -R 777 nameyourownproyect/public/assets
+sudo chmod -R 777 nameyourownproyect/public/uploads
 ```
 
 If you want to be more carefully use the group of apache process and give just 775
@@ -54,10 +54,10 @@ If you want to be more carefully use the group of apache process and give just 7
 sudo chown -R nameyouruser:wwworapachegroup nameyourownproyect
 
 # And then you just give 775 access 
-sudo chmod -R 775 nameyourownproyect/app/logs 
-sudo chmod -R 775 nameyourownproyect/app/modules 
-sudo chmod -R 775 nameyourownproyect/assets
-sudo chmod -R 775 nameyourownproyect/uploads
+sudo chmod -R 775 nameyourownproyect/app/storage 
+sudo chmod -R 775 nameyourownproyect/app/modules // this is just for develop stage for generator code
+sudo chmod -R 775 nameyourownproyect/public/assets
+sudo chmod -R 775 nameyourownproyect/public/uploads
 ```
 
  
