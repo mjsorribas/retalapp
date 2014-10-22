@@ -35,21 +35,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo Yii::app()->getModule('home')->url?>"><?php echo Yii::app()->name;?></a>
+          <a class="navbar-brand" href="<?php echo r('home')->url?>"><?php echo Yii::app()->name;?></a>
         </div>
         <div class="navbar-collapse collapse">
-        <?php $this->widget('zii.widgets.CMenu',array(
-  			'htmlOptions'=>array('class'=>'nav navbar-nav navbar-right'),
-            'items'=>array(
-                array('label'=>'Home', 'url'=>Yii::app()->getModule('home')->url, 'visible'=>!Yii::app()->getModule('users')->check()),
-                array('label'=>'CMS', 'url'=>Yii::app()->getModule('admin')->url, 'visible'=>Yii::app()->getModule('users')->check('admin','root')),
-                array('label'=>'Ingresar',  'linkOptions'=>array("class"=>"module-users-login"), 'url'=>array('#'), 'visible'=>!Yii::app()->getModule('users')->check()),
-                array('label'=>'Registrarse', 'linkOptions'=>array("data-toggle"=>"modal", "data-target"=>"#registerModal"), 'url'=>array('#'), 'visible'=>!Yii::app()->getModule('users')->check()),
-                array('label'=>Yii::app()->getModule('users')->name, 'linkOptions'=>array("data-toggle"=>"modal", "data-target"=>"#profileModal"), 'url'=>array('#'), 'visible'=>Yii::app()->getModule('users')->check()),
-                array('label'=>'Salir', 'url'=>Yii::app()->getModule('users')->toLogout, 'visible'=>Yii::app()->getModule('users')->check())
 
-            ),
-		)); ?>
+        <ul class="nav navbar-nav navbar-right">
+         <?php if(r('users')->check('admin','root')):?>
+           <li><a href="<?=r('admin')->url?>">CMS</a></li>
+         <?php endif;?>
+           <li><a href="<?=r('home')->url?>"><?=Yii::t('app','Home')?></a></li>
+           
+         <?php if(!r('users')->check()):?>
+           <li><a href="<?=r('users')->loginUrl?>"><?=Yii::t('app','Sign In')?></a></li>
+           <li><a href="<?=r('users')->registerUrl?>"><?=Yii::t('app','Sign Up')?></a></li>
+         <?php else:?>
+           <li><a href="<?=r('users')->profileUrl?>"><?=r('users')->name?></a></li>
+           <li><a href="<?=r('users')->logoutUrl?>"><?=Yii::t('app','Logout')?></a></li>
+         <?php endif;?>
+
+        </ul>
+        
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -74,6 +79,9 @@
     ================================================== -->
     <script src="<?php echo $this->themeUrl(); ?>/js/bootstrap.min.js"></script>
     <script src="<?php echo $this->themeUrl(); ?>/js/bootbox.min.js"></script>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
     <?php echo $this->builtEndBody()?>
   </body>
 </html>

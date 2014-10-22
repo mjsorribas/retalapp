@@ -11,7 +11,12 @@ return array(
         // y es para ocultar el menu lateral en el cms
         // 'showMenuFromAdmin'=>false,
     ),
-    
+    /*
+    'rusers'=>array(
+        'class'=>'application.modules.rusers.RusersModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+    ),
+    */
     /*
      * Modulo que se llama por defecto cuando
      * se accede al la petición / 
@@ -22,7 +27,7 @@ return array(
         'class'=>'app.modules.home.HomeModule',
         // 'showMenuFromAdmin'=>false,
     ),
-    
+
     // 'test'=>array(
     //     'class'=>'app.vendor.modules.test.Test',
     //     // 'showMenuFromAdmin'=>false,
@@ -42,11 +47,9 @@ return array(
      * debes redefinir el modelo extendiendo Users
      */
     'users' => array(
-        'class' => 'core.extensions.modules.users.UsersModule',
+        'class' => 'application.modules.rusers.RusersModule',
         'redirectLogin' => array('/home'),
         'enableOAuth' => true,
-        // 'enableModals' => false,
-        // 'usersModalsPath' => 'webroot.themes.yourtheme.views.layouts._users_modals',
         // 'showMenuFromAdmin'=>false,
         // 'labelMenu' => 'Usuarios',
     ),
