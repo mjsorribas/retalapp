@@ -27,7 +27,7 @@ nameyourownproyect/app/config/retalapp.sql
 nameyourownproyect/app/config/database.php
 ```
 # Them open your browser #
-On http://localhost/nameyourownproyect
+On http://localhost/nameyourownproyect/public
 Note: You neet to have your mod_rewrite apache enabled
 
 Role of programmer or PM, Settings might not see the admin
