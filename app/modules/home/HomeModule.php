@@ -4,6 +4,7 @@ class HomeModule extends Module
 {
 	public function init()
 	{
+		parent::init();
 		// this method is called when the module is being created
 		// you may place code here to customize the module or the application
 
@@ -15,6 +16,9 @@ class HomeModule extends Module
 			$this->id.'.models.*',
 			$this->id.'.components.*',
 		));
+
+		if(file_exists(dirname(__FILE__)."/components.php"))
+			r()->setComponents(require(dirname(__FILE__)."/components.php"), false);
 	}
 
 	/*

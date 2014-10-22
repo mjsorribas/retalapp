@@ -4,19 +4,19 @@ return array(
     /*
      * Modulo para mostrar el dashboard
      * y al que se redirecciona al logearce en el back
+     * 
+     * En este módulo podemos publicar reportes desde
+     * cualquier módulo utilizando algunas funciones
+     * predeterminadas
+     * 
      */
     'admin' => array(
-        'class' => 'core.extensions.modules.admin.AdminModule',
+        'class' => 'core.modules.admin.AdminModule',
         // Este parametro lo reciben todos los módulos
         // y es para ocultar el menu lateral en el cms
         // 'showMenuFromAdmin'=>false,
     ),
-    /*
-    'rusers'=>array(
-        'class'=>'application.modules.rusers.RusersModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-    ),
-    */
+   
     /*
      * Modulo que se llama por defecto cuando
      * se accede al la petición / 
@@ -47,11 +47,11 @@ return array(
      * debes redefinir el modelo extendiendo Users
      */
     'users' => array(
-        'class' => 'application.modules.rusers.RusersModule',
+        'class' => 'core.modules.users.UsersModule',
         'redirectLogin' => array('/home'),
         'enableOAuth' => true,
         // 'showMenuFromAdmin'=>false,
-        // 'labelMenu' => 'Usuarios',
+        // 'labelMenu' => 'Users',
     ),
     
     /**
@@ -61,7 +61,7 @@ return array(
      * puedes ver los atributos publicos de la clase SettingsModule
      */
     'settings' => array(
-        'class' => 'core.extensions.modules.settings.SettingsModule',
+        'class' => 'core.modules.settings.SettingsModule',
         // 'showMenuFromAdmin'=>false,
     ),
 
@@ -70,7 +70,7 @@ return array(
      * correos y como de la configuración de smtp 
     */
     'smtp'=>array(
-        'class'=>'core.extensions.modules.smtp.SmtpModule',
+        'class'=>'core.modules.smtp.SmtpModule',
         'colorTemplate'=>'#1f535c',
         'colorFontTemplate'=>'#8ea9ae',
         // 'showMenuFromAdmin'=>false,
@@ -82,7 +82,7 @@ return array(
      * local no en producción
      */
     'gii' => array(
-        'class' => 'core.extensions.modules.gii.GiiModule',
+        'class' => 'core.modules.gii.GiiModule',
         // If removed, Gii defaults to localhost only. Edit carefully to taste.
         'ipFilters' => array('127.0.0.1', '::1'),
         'showMenuFromAdmin'=>YII_DEBUG,
