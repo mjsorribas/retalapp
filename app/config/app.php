@@ -1,6 +1,6 @@
 <?php
 return array(
-    'defaultModule'=>'home',
+    'defaultModule'=>'landing',
     'themeBack'=>'adminlte',
     'themeFront'=>'flat',
     'debugWeb'=>true,

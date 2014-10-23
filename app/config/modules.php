@@ -17,6 +17,11 @@ return array(
         // 'showMenuFromAdmin'=>false,
     ),
 
+    'landing'=>array(
+        'class'=>'application.modules.landing.LandingModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+    ),
+
     /**
      * Modulo para le manejo de usuarios
      * session, reistro, recuperar contraseña etc
