@@ -48,7 +48,7 @@ return array(
      */
     'users' => array(
         'class' => 'core.modules.users.UsersModule',
-        'redirectLogin' => array('/home'),
+        'redirectLogin' => array('/'),
         'enableOAuth' => true,
         // 'showMenuFromAdmin'=>false,
         // 'labelMenu' => 'Users',
