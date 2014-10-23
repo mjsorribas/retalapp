@@ -90,24 +90,6 @@ INSERT INTO `gii_models` (`id`, `tableName`, `modelClass`, `moduleName`, `templa
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `home_home`
---
-
-CREATE TABLE IF NOT EXISTS `home_home` (
-`id` int(11) NOT NULL,
-  `editor_text` text
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Volcado de datos para la tabla `home_home`
---
-
-INSERT INTO `home_home` (`id`, `editor_text`) VALUES
-(3, '{"data":[{"type":"heading","data":{"text":"Hello world!"}},{"type":"text","data":{"text":"This is a simple text of home\\n"}}]}');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `settings_settings`
 --
 
@@ -374,12 +356,6 @@ ALTER TABLE `gii_models`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `home_home`
---
-ALTER TABLE `home_home`
- ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `settings_settings`
 --
 ALTER TABLE `settings_settings`
@@ -465,11 +441,6 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 ALTER TABLE `gii_models`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT de la tabla `home_home`
---
-ALTER TABLE `home_home`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `settings_settings`
 --

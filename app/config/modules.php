@@ -16,22 +16,6 @@ return array(
         // y es para ocultar el menu lateral en el cms
         // 'showMenuFromAdmin'=>false,
     ),
-   
-    /*
-     * Modulo que se llama por defecto cuando
-     * se accede al la petición / 
-     * este módulo esta unicado en la carpeta modules del proyecto
-     * inicial pero pued ser rremplazado por el módulo que tu quieras
-    */
-    'home'=>array(
-        'class'=>'app.modules.home.HomeModule',
-        // 'showMenuFromAdmin'=>false,
-    ),
-
-    // 'test'=>array(
-    //     'class'=>'app.vendor.modules.test.Test',
-    //     // 'showMenuFromAdmin'=>false,
-    // ),
 
     /**
      * Modulo para le manejo de usuarios
