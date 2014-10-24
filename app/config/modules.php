@@ -56,10 +56,10 @@ return array(
 
     /**
      * Este es el módulo encargado del envío de 
-     * correos y como de la configuración de smtp 
+     * correos y como de la configuración de email 
     */
-    'smtp'=>array(
-        'class'=>'core.modules.smtp.SmtpModule',
+    'email'=>array(
+        'class'=>'core.modules.email.EmailModule',
         'colorTemplate'=>'#1f535c',
         'colorFontTemplate'=>'#8ea9ae',
         // 'showMenuFromAdmin'=>false,

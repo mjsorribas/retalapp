@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top"><?=r()->name?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,13 +48,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="<?=r()->createUrl("/")?>?#portfolio">Portfolio</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="<?=r()->createUrl("/")?>?#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="<?=r()->createUrl("/")?>?#contact">Contact</a>
                     </li>
 
                     <?php if(r('users')->check('admin','root')):?>
@@ -62,6 +62,7 @@
                       <a href="<?=r('admin')->url?>">CMS</a>
                     </li>
                     <?php endif;?>
+                    
                     <li>
                       <a href="<?=r()->createUrl('/')?>"><?=Yii::t('app','Home')?></a>
                     </li>
@@ -146,19 +147,19 @@
     </div>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?php r()->theme->baseUrl?>/js/bootstrap.min.js"></script>
+    <script src="<?=r()->theme->baseUrl?>/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="<?php r()->theme->baseUrl?>/js/classie.js"></script>
-    <script src="<?php r()->theme->baseUrl?>/js/cbpAnimatedHeader.js"></script>
+    <script src="<?=r()->theme->baseUrl?>/js/classie.js"></script>
+    <script src="<?=r()->theme->baseUrl?>/js/cbpAnimatedHeader.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="<?php r()->theme->baseUrl?>/js/jqBootstrapValidation.js"></script>
-    <script src="<?php r()->theme->baseUrl?>/js/contact_me.js"></script>
+    <script src="<?=r()->theme->baseUrl?>/js/jqBootstrapValidation.js"></script>
+    <script src="<?=r()->theme->baseUrl?>/js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="<?php r()->theme->baseUrl?>/js/freelancer.js"></script>
+    <script src="<?=r()->theme->baseUrl?>/js/freelancer.js"></script>
     <?php echo $this->builtEndBody()?>
 </body>
 </html>
