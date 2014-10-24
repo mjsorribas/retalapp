@@ -4,22 +4,25 @@
 $this->breadcrumbs=array(
 	$this->module->id,
 );
+/*
 ?>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <img class="img-responsive" src="<?=r()->theme->baseUrl?>/img/profile.png" alt="">
-                <div class="intro-text">
-                    <span class="name">Start Bootstrap</span>
-                    <hr class="star-light">
-                    <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
+<?php foreach(LandingElements::model()->findAll(array('order'=>'orden_id')) as $data):?>
+<?php 
+    $models=array();
+    foreach($selectType[$data->type]['models'] as $row) {
+        
+        $criteria=$row['criteria'];
+        $modelClass=$row['modelClass'];
+        $typeFind=$row['typeFind'];
+
+        $models[$row['name']]=CActiveRecord::model($modelClass)->{$typeFind}($criteria);
+    }
+    $modelsView=array_merge($models,array('item'=>$data));
+?>
+<?php $this->renderPartial('_'.$data->type,$modelsView);?>
+<?php endforeach;?>
+<?php */?>
 
 <!-- Portfolio Grid Section -->
 <section id="portfolio">
@@ -398,4 +401,3 @@ $this->breadcrumbs=array(
         </div>
     </div>
 </div>
-  

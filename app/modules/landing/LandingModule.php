@@ -2,6 +2,24 @@
 
 class LandingModule extends Module
 {
+	public function getListOfTypes()
+	{
+		return array(
+		    
+		    'header1'=>array(
+		        'models'=>array(
+		            array(
+		                'criteria'=>array(),
+		                'name'=>'header',
+		                'modelClass'=>'LandingHeader1',
+		                'typeFind'=>'find',
+		            ),
+		        )
+		    ),
+
+		);
+	}
+
 	public function init()
 	{
 		parent::init();
@@ -33,15 +51,19 @@ class LandingModule extends Module
 			return false;
 	}
 
-	/**
-	 * For one link on admin sidebar
-	*/
-	public function menuItems()
-	{
-		return array(
-            array('label'=>$this->labelMenu!==null?$this->labelMenu:Yii::t('app',ucfirst($this->id)), 'icon'=>'fa fa-puzzle-piece', 'url'=>array('/'.$this->id.'/back')),
+	/*
+     * HOeee!! Do you want a multi-level menu?
+     * Here is
+    */
+    public function menuItems()
+    {
+        return array(
+            array('label'=>Yii::t('app','Landing'), 'icon'=>'fa fa-puzzle-piece', 'url'=>array('#'), 'items'=>array(
+                array('label'=>Yii::t('app','Elements for page'), 'icon'=>'fa fa-list', 'url'=>array('/'.$this->id.'/elements/admin')),
+                // ... Put here more sub-menues like this 
+            )),
        );
-	}
+    }
 
 	/*
 	 * HOeee!! Do you want a multi-level menu?
