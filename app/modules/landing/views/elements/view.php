@@ -26,9 +26,19 @@ $this->breadcrumbs=array(
             <p><?php echo $model->name;?></p>
           </div>
 
+          <div class="panel-heading"><b><?php echo CHtml::encode($model->getAttributeLabel('module')); ?>:</b></div>
+          <div class="panel-body">
+            <p><?php echo $model->module;?></p>
+          </div>
+
           <div class="panel-heading"><b><?php echo CHtml::encode($model->getAttributeLabel('type')); ?>:</b></div>
           <div class="panel-body">
             <p><?php echo $model->type;?></p>
+          </div>
+
+          <div class="panel-heading"><b><?php echo CHtml::encode($model->getAttributeLabel('landing_elements_positions_id')); ?>:</b></div>
+          <div class="panel-body">
+            <p><?php echo $model->landing_elements_positions_id;?></p>
           </div>
 
 

@@ -2,24 +2,6 @@
 
 class LandingModule extends Module
 {
-	public function getListOfTypes()
-	{
-		return array(
-		    
-		    'header1'=>array(
-		        'models'=>array(
-		            array(
-		                'criteria'=>array(),
-		                'name'=>'header',
-		                'modelClass'=>'LandingHeader1',
-		                'typeFind'=>'find',
-		            ),
-		        )
-		    ),
-
-		);
-	}
-
 	public function init()
 	{
 		parent::init();
@@ -58,12 +40,49 @@ class LandingModule extends Module
     public function menuItems()
     {
         return array(
-            array('label'=>Yii::t('app','Landing'), 'icon'=>'fa fa-puzzle-piece', 'url'=>array('#'), 'items'=>array(
+            array('label'=>Yii::t('app','Landing'), 'icon'=>'fa fa-align-justify ', 'url'=>array('#'), 'items'=>array(
                 array('label'=>Yii::t('app','Elements for page'), 'icon'=>'fa fa-list', 'url'=>array('/'.$this->id.'/elements/admin')),
                 // ... Put here more sub-menues like this 
             )),
        );
     }
+
+    public function getTypesBlocks()
+    {
+    	return array(
+			'menu-1'=>'landingMenu',
+			'header-1'=>'landingHeader',
+			'content-1'=>'landingContent1',
+			'footer-1'=>'landingFooter',
+			'footer-small-1'=>'landingFooterSmall',
+		);
+    }
+
+
+	public function landingMenu($item=null)
+	{
+		return r()->controller->renderPartial(LANDING_ID.'.views.page._menu',array(),true);
+	}
+
+	public function landingHeader($item=null)
+	{
+		return r()->controller->renderPartial(LANDING_ID.'.views.page._header',array(),true);
+	}
+
+	public function landingFooter($item=null)
+	{
+		return r()->controller->renderPartial(LANDING_ID.'.views.page._footer',array(),true);
+	}
+
+	public function landingFooterSmall($item=null)
+	{
+		return r()->controller->renderPartial(LANDING_ID.'.views.page._footer_small',array(),true);
+	}
+
+	public function landingContent1($item=null)
+	{
+		return r()->controller->renderPartial(LANDING_ID.'.views.page._content1',array(),true);
+	}
 
 	/*
 	 * HOeee!! Do you want a multi-level menu?

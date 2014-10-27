@@ -20,7 +20,7 @@
 		<?php echo CHtml::link(Yii::t('app','Back'),array('admin'),array('class'=>'btn btn-large btn-default'))?>        </div>
     </div>
 <div class="row">
-	<div class="col-lg-7">
+	<div class="col-lg-6">
 
 <div class="form-group">
 	<?php echo $form->labelEx($model,'image',array('class'=>'control-label')); ?>
@@ -42,12 +42,22 @@
 				),true); ?>
 	<?php echo $form->error($model,'name',array('class'=>'help-block')); ?>
 </div>
+<div class="form-group">
+	<?php echo $form->labelEx($model,'module',array('class'=>'control-label')); ?>
+	<?php echo $form->dropDownList($model,'module',array('1'=>'Value 1','2'=>'Value 2','3'=>'Value 3')/* CHtml::listData(::model()->findAll(array('condition'=>'1=1')),'id','nameValueToShow')*/,array('empty'=>Yii::t('app','Select one ...'),'class'=>'form-control')); ?>
+	<?php echo $form->error($model,'module',array('class'=>'help-block')); ?>
+</div>
 	</div>
-	<div class="col-lg-5">
+	<div class="col-lg-6">
 <div class="form-group">
 	<?php echo $form->labelEx($model,'type',array('class'=>'control-label')); ?>
 	<?php echo $form->dropDownList($model,'type',array('1'=>'Value 1','2'=>'Value 2','3'=>'Value 3')/* CHtml::listData(::model()->findAll(array('condition'=>'1=1')),'id','nameValueToShow')*/,array('empty'=>Yii::t('app','Select one ...'),'class'=>'form-control')); ?>
 	<?php echo $form->error($model,'type',array('class'=>'help-block')); ?>
+</div>
+<div class="form-group">
+	<?php echo $form->labelEx($model,'landing_elements_positions_id',array('class'=>'control-label')); ?>
+	<?php echo $form->dropDownList($model,'landing_elements_positions_id',LandingElementsPositions::listData(),array('empty'=>Yii::t('app','Select ...'),'class'=>'form-control')); ?>
+	<?php echo $form->error($model,'landing_elements_positions_id',array('class'=>'help-block')); ?>
 </div>
 	</div>
 </div>

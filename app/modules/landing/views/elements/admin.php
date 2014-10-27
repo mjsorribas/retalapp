@@ -34,11 +34,13 @@ $this->breadcrumbs=array(
         });
     }",
 	'columns'=>array(
+		/*
 		array(
 			'name'=>'id',
 			'type'=>'raw',
 			'value'=>'$data->id',
 		),
+		*/
 		array(
 			'name'=>'image',
 			'filter'=>false,
@@ -52,6 +54,15 @@ $this->breadcrumbs=array(
 			'value'=>'$data->name',
 		),
 		array(
+			'name'=>'module',
+			'filter'=> array('1'=>'Value 1','2'=>'Value 2','3'=>'Value 3'),
+			//'filter'=> CHtml::listData(NameModelRelated::model()->findAll(array('condition'=>'1=1')),'id','nameValueToShow'),
+			'type'=>'raw',
+			'value'=>'$data->module',
+			//'value'=>'$data->relationame->namefieldtoshow',
+		),
+		/*
+		array(
 			'name'=>'type',
 			'filter'=> array('1'=>'Value 1','2'=>'Value 2','3'=>'Value 3'),
 			//'filter'=> CHtml::listData(NameModelRelated::model()->findAll(array('condition'=>'1=1')),'id','nameValueToShow'),
@@ -59,7 +70,15 @@ $this->breadcrumbs=array(
 			'value'=>'$data->type',
 			//'value'=>'$data->relationame->namefieldtoshow',
 		),
-		/*
+		array(
+			'name'=>'landing_elements_positions_id',
+			'filter'=> array('1'=>'Value 1','2'=>'Value 2','3'=>'Value 3'),
+			//'filter'=> CHtml::listData(NameModelRelated::model()->findAll(array('condition'=>'1=1')),'id','nameValueToShow'),
+			'type'=>'raw',
+			'value'=>'$data->landing_elements_positions_id',
+			//'value'=>'$data->relationame->namefieldtoshow',
+		),
+		*/
 		/*array(
 			'class'=>'CButtonColumn',
 		),*/

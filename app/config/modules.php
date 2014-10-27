@@ -19,7 +19,7 @@ return array(
 
     'landing'=>array(
         'class'=>'application.modules.landing.LandingModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+        'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
     ),
 
     /**
