@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 25-10-2014 a las 01:54:29
+-- Tiempo de generación: 27-10-2014 a las 21:53:09
 -- Versión del servidor: 5.6.20
 -- Versión de PHP: 5.5.15
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `gii_cruds` (
   `fontIcon` varchar(100) DEFAULT NULL,
   `template` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
 
 --
 -- Volcado de datos para la tabla `gii_cruds`
@@ -59,7 +59,10 @@ INSERT INTO `gii_cruds` (`id`, `moduleName`, `model`, `controller`, `labelName`,
 (29, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:24'),
 (30, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:28'),
 (31, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:32'),
-(32, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:43');
+(32, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:43'),
+(33, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-27 20:45:51'),
+(34, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-27 20:45:53'),
+(35, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-27 20:46:03');
 
 -- --------------------------------------------------------
 
@@ -74,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `gii_models` (
   `moduleName` varchar(100) NOT NULL,
   `template` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Volcado de datos para la tabla `gii_models`
@@ -93,7 +96,12 @@ INSERT INTO `gii_models` (`id`, `tableName`, `modelClass`, `moduleName`, `templa
 (15, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 21:00:39'),
 (16, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 21:00:48'),
 (17, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-25 01:36:57'),
-(18, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-25 01:36:59');
+(18, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-25 01:36:59'),
+(19, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-27 20:45:30'),
+(20, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-27 20:45:33'),
+(21, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-27 20:45:39'),
+(22, 'landing_elements_positions', 'LandingElementsPositions', 'landing', 'default', '2014-10-27 21:26:22'),
+(23, 'landing_elements_positions', 'LandingElementsPositions', 'landing', 'default', '2014-10-27 21:26:25');
 
 -- --------------------------------------------------------
 
@@ -105,17 +113,41 @@ CREATE TABLE IF NOT EXISTS `landing_elements` (
 `id` int(11) NOT NULL,
   `image` varchar(100) NOT NULL COMMENT 'type:img',
   `name` varchar(100) NOT NULL,
+  `module` varchar(255) NOT NULL COMMENT 'type:select',
   `type` varchar(100) NOT NULL COMMENT 'type:select',
+  `landing_elements_positions_id` int(10) NOT NULL COMMENT 'type:select;table:landing_elements_positions',
   `orden_id` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `landing_elements`
 --
 
-INSERT INTO `landing_elements` (`id`, `image`, `name`, `type`, `orden_id`) VALUES
-(1, '1414194118.png', 'Header', '1', 1),
-(2, '1414194163.png', 'Contact', '2', 2);
+INSERT INTO `landing_elements` (`id`, `image`, `name`, `module`, `type`, `landing_elements_positions_id`, `orden_id`) VALUES
+(1, '1414194118.png', 'Header', 'landing', 'menu-1', 1, 1),
+(2, '1414194163.png', 'Contact', 'landing', 'header-1', 2, 2),
+(3, '1414194163.png', 'Footer', 'landing', 'footer-1', 3, 3),
+(4, '1414194163.png', 'Footer Copirigts', 'landing', 'footer-small-1', 3, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `landing_elements_positions`
+--
+
+CREATE TABLE IF NOT EXISTS `landing_elements_positions` (
+`id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Volcado de datos para la tabla `landing_elements_positions`
+--
+
+INSERT INTO `landing_elements_positions` (`id`, `name`) VALUES
+(1, 'Header'),
+(2, 'Content'),
+(3, 'Footer');
 
 -- --------------------------------------------------------
 
@@ -416,6 +448,12 @@ ALTER TABLE `landing_elements`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `landing_elements_positions`
+--
+ALTER TABLE `landing_elements_positions`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `settings_settings`
 --
 ALTER TABLE `settings_settings`
@@ -507,17 +545,22 @@ ALTER TABLE `users_users`
 -- AUTO_INCREMENT de la tabla `gii_cruds`
 --
 ALTER TABLE `gii_cruds`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT de la tabla `gii_models`
 --
 ALTER TABLE `gii_models`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT de la tabla `landing_elements`
 --
 ALTER TABLE `landing_elements`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `landing_elements_positions`
+--
+ALTER TABLE `landing_elements_positions`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `settings_settings`
 --
