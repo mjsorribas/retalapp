@@ -45,10 +45,25 @@ $this->breadcrumbs=array(
 			'value'=>'$data->name',
 		),
 		array(
+			'name'=>'image',
+			'filter'=>false,
+			'type'=>'raw',
+			'value'=>'"<span class=\"text-muted\">".substr($data->image,0,50)."...</span>"',
+			'value'=>'CHtml::image(Yii::app()->request->baseUrl."/uploads/".$data->image,"",array("class"=>"img-responsive img-thumbnail","style"=>"max-width:100px"))',
+		),
+		array(
+			'name'=>'description',
+			'type'=>'raw',
+			'value'=>'"<span class=\"text-muted\">".substr(strip_tags($data->description),0,50)."...</span>"',
+		),
+		/*
+		/*
+		array(
 			'name'=>'color',
 			'type'=>'raw',
 			'value'=>'"<i style=\"color:#".$data->color."\" class=\"fa fa-square\"></i>"',
 		),
+		*/
 		/*array(
 			'class'=>'CButtonColumn',
 		),*/

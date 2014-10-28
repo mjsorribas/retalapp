@@ -9,9 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--
             <a class="navbar-brand" href="#page-top"><?=r()->name?></a>
-            -->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,8 +17,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden"><a href="#page-top"></a></li>
               
-                <li><a href="#contactus">Contact</a></li>
-                <li><a href="#auditions">Auditions</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#job">Job</a></li>
                 
                 <li><a href="#">&nbsp;</a></li>
                 

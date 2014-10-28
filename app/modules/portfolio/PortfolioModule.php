@@ -36,9 +36,12 @@ class PortfolioModule extends Module
  	public function menuItems()
     {
         return array(
-            array('label'=>Yii::t('app','Portfolio'), 'icon'=>'fa fa-puzzle-piece', 'url'=>array('#'), 'items'=>array(
+            array('label'=>Yii::t('app','Portfolio'), 'icon'=>'fa fa-suitcase', 'url'=>array('#'), 'items'=>array(
                 array('label'=>Yii::t('app','Categories'), 'icon'=>'fa fa-list-ol', 'url'=>array('/'.$this->id.'/categories/admin')),
                 array('label'=>Yii::t('app','Portfolio Items'), 'icon'=>'fa fa-suitcase', 'url'=>array('/'.$this->id.'/items/admin')),
+                   array('label'=>Yii::t('app','Intro text'), 'icon'=>'fa fa-pencil-square-o', 'url'=>array('/'.$this->id.'/intro')),
+              
+               
                 // ... Put here more sub-menues like this 
             )),
        );
@@ -48,6 +51,7 @@ class PortfolioModule extends Module
     {
     	return array(
 			'list-1'=>'landingPortfolio',
+			'categories-1'=>'landingCategories',
 		);
     }
 
@@ -55,6 +59,11 @@ class PortfolioModule extends Module
 	public function landingPortfolio($item=null)
 	{
 		return r()->controller->renderPartial(PORTFOLIO_ID.'.views.page._portfolio_block',array(),true);
+	}
+
+	public function landingCategories($item=null)
+	{
+		return r()->controller->renderPartial(PORTFOLIO_ID.'.views.page._categories',array(),true);
 	}
 
 	/*

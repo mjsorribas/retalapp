@@ -56,6 +56,7 @@ class LandingModule extends Module
 			'header-slider-1'=>'landingHeaderSlider',
 			'content-1'=>'landingContent1',
 			'footer-1'=>'landingFooter',
+			'footer-2'=>'landingFooter2',
 			'footer-small-1'=>'landingFooterSmall',
 		);
     }
@@ -79,6 +80,11 @@ class LandingModule extends Module
 	public function landingFooter($item=null)
 	{
 		return r()->controller->renderPartial(LANDING_ID.'.views.page._footer',array(),true);
+	}
+
+	public function landingFooter2($item=null)
+	{
+		return r()->controller->renderPartial(LANDING_ID.'.views.page._footer2',array(),true);
 	}
 
 	public function landingFooterSmall($item=null)

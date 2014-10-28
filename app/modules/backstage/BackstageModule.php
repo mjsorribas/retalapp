@@ -37,11 +37,14 @@ class BackstageModule extends Module
 	 * For one link on admin sidebar
 	*/
 	public function menuItems()
-	{
-		return array(
-            array('label'=>$this->labelMenu!==null?$this->labelMenu:Yii::t('app',ucfirst($this->id)), 'icon'=>'fa fa-puzzle-piece', 'url'=>array('/'.$this->id.'/back')),
+    {
+        return array(
+            array('label'=>Yii::t('app','Backstage'), 'icon'=>'fa fa-home', 'url'=>array('#'), 'items'=>array(
+                array('label'=>Yii::t('app','Backstages'), 'icon'=>'fa fa-home', 'url'=>array('/'.$this->id.'/items/admin')),
+                // ... Put here more sub-menues like this 
+            )),
        );
-	}
+    }
 
 	/*
 	 * HOeee!! Do you want a multi-level menu?
@@ -56,6 +59,23 @@ class BackstageModule extends Module
        );
 	}
 	*/
+
+	/*
+	 * HOeee!! Do you want publish elements on the landing module
+	 * Here is
+	*/
+	public function getTypesBlocks()
+    {
+    	return array(
+			'backstage-1'=>'landingBackstage',
+		);
+    }
+
+
+	public function landingBackstage($item=null)
+	{
+		return r()->controller->renderPartial(BACKSTAGE_ID.'.views.page._block',array(),true);
+	}
 
 	/*
 	 * HOeee!! Do you want show someting on the end body

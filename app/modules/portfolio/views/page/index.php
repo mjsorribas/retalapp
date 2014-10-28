@@ -10,12 +10,7 @@
         <div class="row">
         <?php foreach(PortfolioItems::model()->findAll(array('condition'=>'portfolio_categories_id='.$category->id,'order'=>'orden_id','limit'=>8)) as $data):?>
             <div class="col-sm-3 portfolio-item" style="height:250px">
-                <a href="<?php echo $this->createUrl("index")?>#portfolio-<?=$data->id?>" class="portfolio-link">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
+                <a href="<?php echo $this->createUrl("index")?>#portfolio-<?=$data->id?>">
                     <img src="<?=$data->preview_path?>" class="img-responsive" alt="">
                 </a>
             </div>

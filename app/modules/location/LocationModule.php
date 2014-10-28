@@ -36,12 +36,15 @@ class LocationModule extends Module
 	/**
 	 * For one link on admin sidebar
 	*/
-	public function menuItems()
-	{
-		return array(
-            array('label'=>$this->labelMenu!==null?$this->labelMenu:Yii::t('app',ucfirst($this->id)), 'icon'=>'fa fa-puzzle-piece', 'url'=>array('/'.$this->id.'/back')),
+ 	public function menuItems()
+    {
+        return array(
+            array('label'=>Yii::t('app','Location'), 'icon'=>'fa fa-map-marker', 'url'=>array('#'), 'items'=>array(
+                array('label'=>Yii::t('app','Location'), 'icon'=>'fa fa-map-marker', 'url'=>array('/'.$this->id.'/gps')),
+                // ... Put here more sub-menues like this 
+            )),
        );
-	}
+    }
 
 	/*
 	 * HOeee!! Do you want a multi-level menu?
@@ -56,6 +59,23 @@ class LocationModule extends Module
        );
 	}
 	*/
+
+	/*
+	 * HOeee!! Do you want publish elements on the landing module
+	 * Here is
+	*/
+	public function getTypesBlocks()
+    {
+    	return array(
+			'location-1'=>'landingLocation',
+		);
+    }
+
+
+	public function landingLocation($item=null)
+	{
+		return r()->controller->renderPartial(LOCATION_ID.'.views.page._block',array(),true);
+	}
 
 	/*
 	 * HOeee!! Do you want show someting on the end body

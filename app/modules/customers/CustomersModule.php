@@ -33,16 +33,16 @@ class CustomersModule extends Module
 			return false;
 	}
 
-	/**
-	 * For one link on admin sidebar
-	*/
-	public function menuItems()
-	{
-		return array(
-            array('label'=>$this->labelMenu!==null?$this->labelMenu:Yii::t('app',ucfirst($this->id)), 'icon'=>'fa fa-puzzle-piece', 'url'=>array('/'.$this->id.'/back')),
+    public function menuItems()
+    {
+        return array(
+            array('label'=>Yii::t('app','Customers'), 'icon'=>'fa fa-credit-card', 'url'=>array('#'), 'items'=>array(
+                array('label'=>Yii::t('app','Customers'), 'icon'=>'fa fa-credit-card', 'url'=>array('/'.$this->id.'/items/admin')),
+                // ... Put here more sub-menues like this 
+            )),
        );
-	}
-
+    }
+    
 	/*
 	 * HOeee!! Do you want a multi-level menu?
 	 * Here is
@@ -56,6 +56,23 @@ class CustomersModule extends Module
        );
 	}
 	*/
+
+	/*
+	 * HOeee!! Do you want publish elements on the landing module
+	 * Here is
+	*/
+	public function getTypesBlocks()
+    {
+    	return array(
+			'customers-1'=>'landingCustomers',
+		);
+    }
+
+
+	public function landingCustomers($item=null)
+	{
+		return r()->controller->renderPartial(CUSTOMERS_ID.'.views.page._block',array(),true);
+	}
 
 	/*
 	 * HOeee!! Do you want show someting on the end body

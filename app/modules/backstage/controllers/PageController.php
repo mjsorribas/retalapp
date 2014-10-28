@@ -2,8 +2,8 @@
 
 class PageController extends FrontController
 {
-	public $title='Backstage';
-	public $subTitle='Administrar backstage';
+	public $title='Location';
+	public $subTitle='Administrar location';
 	
 	public function actionIndex()
 	{
