@@ -19,9 +19,78 @@ return array(
 
     'landing'=>array(
         'class'=>'application.modules.landing.LandingModule',
-        'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+        //'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
     ),
 
+/*
+portfolio Últimos trabajos: Grandes éxitos
+team Nuestro equipo: La banda
+services Lo que hacemos: El kilombo
+location Aquí estamos: GPS
+auditions Únete al kilombo: Audiciones
+contact Contacto: Escríbenos
+backstage Nuestras Instalaciones: Backstage
+customers Nuestros clientes: Club de fans
+work with us
+
+
+
+contactenos
+auditions
+
+portfolio
+team
+location
+backstage
+customers
+
+*/
+
+    'portfolio'=>array(
+        'class'=>'application.modules.portfolio.PortfolioModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+    ),
+
+
+    'team'=>array(
+        'class'=>'application.modules.team.TeamModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
+
+    'services'=>array(
+        'class'=>'application.modules.services.ServicesModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
+
+    'location'=>array(
+        'class'=>'application.modules.location.LocationModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
+
+    'auditions'=>array(
+        'class'=>'application.modules.auditions.AuditionsModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
+
+    'contact'=>array(
+        'class'=>'application.modules.contact.ContactModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
+
+     'backstage'=>array(
+        'class'=>'application.modules.backstage.BackstageModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
+
+     'customers'=>array(
+        'class'=>'application.modules.customers.CustomersModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
+
+     'jobus'=>array(
+        'class'=>'application.modules.jobus.JobusModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+     ),
     /**
      * Modulo para le manejo de usuarios
      * session, reistro, recuperar contraseña etc

@@ -42,7 +42,8 @@ class LandingModule extends Module
         return array(
             array('label'=>Yii::t('app','Landing'), 'icon'=>'fa fa-align-justify ', 'url'=>array('#'), 'items'=>array(
                 array('label'=>Yii::t('app','Elements for page'), 'icon'=>'fa fa-list', 'url'=>array('/'.$this->id.'/elements/admin')),
-                // ... Put here more sub-menues like this 
+                array('label'=>Yii::t('app','Slider'), 'icon'=>'fa fa-magic', 'url'=>array('/'.$this->id.'/slider/admin')),
+           		 // ... Put here more sub-menues like this 
             )),
        );
     }
@@ -52,6 +53,7 @@ class LandingModule extends Module
     	return array(
 			'menu-1'=>'landingMenu',
 			'header-1'=>'landingHeader',
+			'header-slider-1'=>'landingHeaderSlider',
 			'content-1'=>'landingContent1',
 			'footer-1'=>'landingFooter',
 			'footer-small-1'=>'landingFooterSmall',
@@ -67,6 +69,11 @@ class LandingModule extends Module
 	public function landingHeader($item=null)
 	{
 		return r()->controller->renderPartial(LANDING_ID.'.views.page._header',array(),true);
+	}
+
+	public function landingHeaderSlider($item=null)
+	{
+		return r()->controller->renderPartial(LANDING_ID.'.views.page._header_slider',array(),true);
 	}
 
 	public function landingFooter($item=null)
