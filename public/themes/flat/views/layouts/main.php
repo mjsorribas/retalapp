@@ -26,24 +26,11 @@
 
 <body id="page-top" class="index">
 
-<?php foreach(LandingElements::model()->findAll(array('order'=>'orden_id','condition'=>'landing_elements_positions_id=1')) as $data):?>
-<?php 
-    $blocks=r($data->module)->getTypesBlocks();
-    $method=$blocks[$data->type];
-    echo r($data->module)->{$method}();
-?>
-<?php endforeach;?>
 
-    <?php echo $content; ?>
+    <?= r('landing')->getHeader(); ?>
+    <?= $content; ?>
+    <?= r('landing')->getFooter(); ?>
 
-<?php foreach(LandingElements::model()->findAll(array('order'=>'orden_id','condition'=>'landing_elements_positions_id=3')) as $data):?>
-<?php 
-    $blocks=r($data->module)->getTypesBlocks();
-    $method=$blocks[$data->type];
-    echo r($data->module)->{$method}();
-?>
-<?php endforeach;?>
-   
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visble-sm">
         <a class="btn btn-primary" href="#page-top">

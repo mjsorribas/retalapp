@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-10-2014 a las 21:53:09
+-- Tiempo de generación: 30-10-2014 a las 20:59:39
 -- Versión del servidor: 5.6.20
 -- Versión de PHP: 5.5.15
 
@@ -35,34 +35,7 @@ CREATE TABLE IF NOT EXISTS `gii_cruds` (
   `fontIcon` varchar(100) DEFAULT NULL,
   `template` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
-
---
--- Volcado de datos para la tabla `gii_cruds`
---
-
-INSERT INTO `gii_cruds` (`id`, `moduleName`, `model`, `controller`, `labelName`, `fontIcon`, `template`, `created_at`) VALUES
-(15, 'base_users', 'Users', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 19:39:35'),
-(16, 'base_users', 'Users', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 19:39:52'),
-(17, 'rusers', 'UsersUsers', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 20:56:53'),
-(18, 'rusers', 'UsersUsers', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 20:57:01'),
-(19, 'rusers', 'UsersUsers', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 21:01:18'),
-(20, 'rusers', 'UsersUsers', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 21:01:25'),
-(21, 'users', 'UsersUsers', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 21:54:58'),
-(22, 'users', 'UsersUsers', 'users', 'Users', 'fa-users', 'cms-manny-grid', '2014-10-22 21:55:01'),
-(23, 'users', 'Users', 'api_users', 'Users', 'fa-users', 'cms-api', '2014-10-22 22:48:34'),
-(24, 'users', 'Users', 'api_users', 'Users', 'fa-users', 'cms-api', '2014-10-22 22:48:38'),
-(25, 'users', 'Users', 'api_users', 'Users', 'fa-users', 'cms-api', '2014-10-22 22:49:37'),
-(26, 'users', 'Users', 'api_users', 'Users', 'fa-users', 'cms-api', '2014-10-22 22:49:39'),
-(27, 'landing', 'LandingElements', 'elements', 'Elements for page', 'fa-list', 'cms-manny-grid', '2014-10-25 01:38:01'),
-(28, 'landing', 'LandingElements', 'elements', 'Elements for page', 'fa-list', 'cms-manny-grid', '2014-10-25 01:38:04'),
-(29, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:24'),
-(30, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:28'),
-(31, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:32'),
-(32, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-25 01:46:43'),
-(33, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-27 20:45:51'),
-(34, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-27 20:45:53'),
-(35, 'landing', 'LandingElements', 'elements', 'Landing Elements', 'fa-list', 'cms-manny-grid', '2014-10-27 20:46:03');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -77,31 +50,37 @@ CREATE TABLE IF NOT EXISTS `gii_models` (
   `moduleName` varchar(100) NOT NULL,
   `template` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Volcado de datos para la tabla `gii_models`
+-- Estructura de tabla para la tabla `landing_contact_info`
 --
 
-INSERT INTO `gii_models` (`id`, `tableName`, `modelClass`, `moduleName`, `template`, `created_at`) VALUES
-(6, 'users_users', 'UsersUsers', 'base_users', 'default', '2014-10-22 19:35:22'),
-(7, 'users_users', 'UsersUsers', 'base_users', 'default', '2014-10-22 19:35:25'),
-(8, 'users_users', 'UsersUsers', 'base_users', 'default', '2014-10-22 19:37:04'),
-(9, 'users_users', 'UsersUsers', 'base_users', 'default', '2014-10-22 19:39:01'),
-(10, 'users_users', 'RUsersUsers', 'rusers', 'default', '2014-10-22 20:49:55'),
-(11, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 20:53:44'),
-(12, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 20:55:56'),
-(13, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 20:56:08'),
-(14, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 21:00:37'),
-(15, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 21:00:39'),
-(16, 'users_users', 'UsersUsers', 'rusers', 'default', '2014-10-22 21:00:48'),
-(17, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-25 01:36:57'),
-(18, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-25 01:36:59'),
-(19, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-27 20:45:30'),
-(20, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-27 20:45:33'),
-(21, 'landing_elements', 'LandingElements', 'landing', 'default', '2014-10-27 20:45:39'),
-(22, 'landing_elements_positions', 'LandingElementsPositions', 'landing', 'default', '2014-10-27 21:26:22'),
-(23, 'landing_elements_positions', 'LandingElementsPositions', 'landing', 'default', '2014-10-27 21:26:25');
+CREATE TABLE IF NOT EXISTS `landing_contact_info` (
+`id` int(11) NOT NULL,
+  `call_to_action` text,
+  `email` varchar(255) DEFAULT NULL COMMENT 'type:email',
+  `phone` varchar(100) DEFAULT NULL,
+  `facebook` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `google_plus` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `twitter` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `linkedin` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `dribbble` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `youtube` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `pinterest` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `skype` varchar(255) DEFAULT NULL,
+  `instagram` varchar(255) DEFAULT NULL COMMENT 'type:link',
+  `github` varchar(255) DEFAULT NULL COMMENT 'type:link'
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `landing_contact_info`
+--
+
+INSERT INTO `landing_contact_info` (`id`, `call_to_action`, `email`, `phone`, `facebook`, `google_plus`, `twitter`, `linkedin`, `dribbble`, `youtube`, `pinterest`, `skype`, `instagram`, `github`) VALUES
+(1, 'LET''S GET STARTED', 'info@yourcompani.com', '(571) 999-999-999', 'https://www.facebook.com/', 'https://plus.google.com/', 'https://twitter.com/', 'https://www.linkedin.com/', '', 'https://www.youtube.com', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -117,17 +96,17 @@ CREATE TABLE IF NOT EXISTS `landing_elements` (
   `type` varchar(100) NOT NULL COMMENT 'type:select',
   `landing_elements_positions_id` int(10) NOT NULL COMMENT 'type:select;table:landing_elements_positions',
   `orden_id` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Volcado de datos para la tabla `landing_elements`
 --
 
 INSERT INTO `landing_elements` (`id`, `image`, `name`, `module`, `type`, `landing_elements_positions_id`, `orden_id`) VALUES
-(1, '1414194118.png', 'Header', 'landing', 'menu-1', 1, 1),
-(2, '1414194163.png', 'Contact', 'landing', 'header-1', 2, 2),
-(3, '1414194163.png', 'Footer', 'landing', 'footer-1', 3, 3),
-(4, '1414194163.png', 'Footer Copirigts', 'landing', 'footer-small-1', 3, 4);
+(1, '1414695925.png', 'Header', 'landing', 'menu-1', 1, 1),
+(2, '1414695945.png', 'Slider', 'landing', 'header-slider-1', 2, 2),
+(3, '1414695958.png', 'Footer', 'landing', 'footer-1', 3, 1),
+(4, '1414695972.png', 'Footer Copirigts', 'landing', 'footer-small-1', 3, 2);
 
 -- --------------------------------------------------------
 
@@ -148,6 +127,28 @@ INSERT INTO `landing_elements_positions` (`id`, `name`) VALUES
 (1, 'Header'),
 (2, 'Content'),
 (3, 'Footer');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `landing_elements_slider`
+--
+
+CREATE TABLE IF NOT EXISTS `landing_elements_slider` (
+`id` int(11) NOT NULL,
+  `image` varchar(100) DEFAULT NULL COMMENT 'type:img',
+  `title` varchar(100) NOT NULL,
+  `text` text NOT NULL,
+  `orden_id` int(11) NOT NULL,
+  `link` varchar(100) NOT NULL COMMENT 'type:link'
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `landing_elements_slider`
+--
+
+INSERT INTO `landing_elements_slider` (`id`, `image`, `title`, `text`, `orden_id`, `link`) VALUES
+(1, '', 'This is a theme made for Start Bootstrap', 'Free Bootstrap Themes & Templates', 1, 'http://startbootstrap.com/');
 
 -- --------------------------------------------------------
 
@@ -192,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `smpt_config` (
 --
 
 INSERT INTO `smpt_config` (`id`, `enabled`, `host_email_server`, `port_email_server`, `username_email_server`, `password_email_server`) VALUES
-(1, 0, NULL, NULL, NULL, NULL);
+(1, 0, '', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -233,14 +234,6 @@ CREATE TABLE IF NOT EXISTS `users_access_tokens` (
   `code` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
---
--- Volcado de datos para la tabla `users_access_tokens`
---
-
-INSERT INTO `users_access_tokens` (`id`, `acces_token`, `apps_id`, `users_id`, `acces_token_refresh`, `code`) VALUES
-(39, 'S2BbgpCDa3ec7OQ84KQy7g6zNnZmbcjP6GMERpes', 5, 3, 'iamUeOUsYIwchxxkwsfuySwX3ncTm7Jq8RBDbwRw3jye5RkuEQjYa3s3fuMN', NULL),
-(40, 'ThuqnMhYk6pPVPduyw8htUCshCirnYAc5rog6rAI', 5, 3, 'q2WNJ3GKsd4CzS2kdUO5GrFdzdGsuK2fHpOshVYZUwyPkUwjgFdIWIHNnpA5', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -255,13 +248,6 @@ CREATE TABLE IF NOT EXISTS `users_apps` (
   `redirect_uri` varchar(255) DEFAULT NULL,
   `users_id` int(10) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
-
---
--- Volcado de datos para la tabla `users_apps`
---
-
-INSERT INTO `users_apps` (`id`, `name`, `client_id`, `client_secret`, `redirect_uri`, `users_id`) VALUES
-(5, 'first-app', 'first-app', 'kQpj7I5Y4D4zVMpej7u8mh0ZH6BsVw24', '', 3);
 
 -- --------------------------------------------------------
 
@@ -344,13 +330,6 @@ CREATE TABLE IF NOT EXISTS `users_code_auth` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
---
--- Volcado de datos para la tabla `users_code_auth`
---
-
-INSERT INTO `users_code_auth` (`id`, `users_id`, `code`, `created_at`) VALUES
-(1, 1, 'H3NKm0z7TP36fmTbX2U6ko8S7C7eoQ8RIiyQETPu', '2014-10-23 03:59:40');
-
 -- --------------------------------------------------------
 
 --
@@ -414,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `users_users` (
   `img` varchar(255) DEFAULT NULL COMMENT 'type:img;label:Image',
   `registered` datetime NOT NULL,
   `trash` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `users_users`
@@ -442,6 +421,12 @@ ALTER TABLE `gii_models`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `landing_contact_info`
+--
+ALTER TABLE `landing_contact_info`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `landing_elements`
 --
 ALTER TABLE `landing_elements`
@@ -451,6 +436,12 @@ ALTER TABLE `landing_elements`
 -- Indices de la tabla `landing_elements_positions`
 --
 ALTER TABLE `landing_elements_positions`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `landing_elements_slider`
+--
+ALTER TABLE `landing_elements_slider`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -545,22 +536,32 @@ ALTER TABLE `users_users`
 -- AUTO_INCREMENT de la tabla `gii_cruds`
 --
 ALTER TABLE `gii_cruds`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `gii_models`
 --
 ALTER TABLE `gii_models`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `landing_contact_info`
+--
+ALTER TABLE `landing_contact_info`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `landing_elements`
 --
 ALTER TABLE `landing_elements`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `landing_elements_positions`
 --
 ALTER TABLE `landing_elements_positions`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `landing_elements_slider`
+--
+ALTER TABLE `landing_elements_slider`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `settings_settings`
 --
@@ -605,30 +606,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT de la tabla `users_users`
 --
 ALTER TABLE `users_users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `translation_message`
---
-ALTER TABLE `translation_message`
-ADD CONSTRAINT `FK_Message_translation_source_message` FOREIGN KEY (`id`) REFERENCES `translation_source_message` (`id`) ON DELETE CASCADE;
-
---
--- Filtros para la tabla `users_authassignment`
---
-ALTER TABLE `users_authassignment`
-ADD CONSTRAINT `users_authassignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `users_authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `users_authitemchild`
---
-ALTER TABLE `users_authitemchild`
-ADD CONSTRAINT `users_authitemchild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `users_authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `users_authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `users_authitem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
-
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

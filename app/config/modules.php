@@ -16,49 +16,10 @@ return array(
         // y es para ocultar el menu lateral en el cms
         // 'showMenuFromAdmin'=>false,
     ),
-    /*
     'landing'=>array(
-        'class'=>'application.modules.landing.LandingModule',
+        'class'=>'vendor.modules.landing.LandingModule',
         //'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
     ),
-
-    'portfolio'=>array(
-        'class'=>'application.modules.portfolio.PortfolioModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-    ),
-
-
-    'team'=>array(
-        'class'=>'application.modules.team.TeamModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-     ),
-
-     'backstage'=>array(
-        'class'=>'application.modules.backstage.BackstageModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-     ),
-
-
-     'customers'=>array(
-        'class'=>'application.modules.customers.CustomersModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-     ),
-
-
-    'location'=>array(
-        'class'=>'application.modules.location.LocationModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-     ),
-
-    'contact'=>array(
-        'class'=>'application.modules.contact.ContactModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-     ),
-     'job'=>array(
-        'class'=>'application.modules.job.JobModule',
-        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
-     ),
-    */
 
     /**
      * Modulo para le manejo de usuarios

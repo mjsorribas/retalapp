@@ -1,6 +1,7 @@
 {
     "require": {
         "php": ">=5.4.0",
-        "retalapp/core": "dev-master"
+        "retalapp/core": "dev-master",
+        "modules/landing": "dev-master"
     }
 }
