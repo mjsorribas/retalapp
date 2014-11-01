@@ -31,36 +31,7 @@ $stateProvider
   controller: 'AppCtrl'
 })
 
-  
-.state('app.playlists', {
-  url: "/playlists",
-  views: {
-    'menuContent' :{
-      templateUrl: "js/playlist/views/playlists.html",
-      controller: 'PlaylistsCtrl'
-    }
-  }
-})
-
-.state('app.single', {
-  url: "/playlists/:playlistId",
-  views: {
-    'menuContent' :{
-      templateUrl: "js/playlist/views/playlist.html",
-      controller: 'PlaylistCtrl'
-    }
-  }
-})
-.state('app.search', {
-  url: "/search",
-  views: {
-    'menuContent' :{
-      templateUrl: "js/search/views/search.html"
-    }
-  }
-})
-
-
+  /*ROUTES*/
   
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');

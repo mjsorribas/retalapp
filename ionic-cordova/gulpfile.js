@@ -8,10 +8,11 @@ var rename = require('gulp-rename');
 var sh = require('shelljs');
 
 var paths = {
-  sass: ['./scss/**/*.scss']
+  sass: ['./scss/**/*.scss'],
+  modules: ['./www/js/**/*.js','./www/js/**/*.html'],
 };
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass','retalapp']);
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -27,6 +28,44 @@ gulp.task('sass', function(done) {
 
 gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.modules, ['retalapp']);
+});
+
+gulp.task('retalapp', function() {
+  // place code for your default task here
+  var fs = require('fs');
+  var files = fs.readdirSync('./www/js');
+  var contentRoutes = '';  
+  var contentMenu = '';  
+  var contentIndex = '';  
+  
+  var appFile = fs.readFileSync('./www/js/app.raw.js', 'utf8');
+  var menuFile = fs.readFileSync('./www/menu.raw.html', 'utf8');
+  var indexFile = fs.readFileSync('./www/index.raw.html', 'utf8');
+  
+  for (i = 0; i < files.length; i++) {
+    gutil.log('retalapp', gutil.colors.cyan(files[i]));
+    var existsRoutes = fs.existsSync('./www/js/'+files[i]+'/routes.js');
+    if(existsRoutes){
+        var data = fs.readFileSync('./www/js/'+files[i]+'/routes.js', 'utf8');
+        contentRoutes+=data;
+        gutil.log('retalapp', gutil.colors.cyan(files[i]));
+    }
+    var existsMenu = fs.existsSync('./www/js/'+files[i]+'/menu.html');
+    if(existsMenu){
+      var menu = fs.readFileSync('./www/js/'+files[i]+'/menu.html', 'utf8');
+      contentMenu+=menu;
+    }
+    var existsIndex = fs.existsSync('./www/js/'+files[i]+'/index.html');
+    if(existsIndex){
+      var index = fs.readFileSync('./www/js/'+files[i]+'/index.html', 'utf8');
+      contentIndex+=index;
+    }
+  }
+
+  fs.writeFileSync('./www/js/app.js',appFile.replace('/*ROUTES*/',contentRoutes));
+  fs.writeFileSync('./www/menu.html',menuFile.replace('<!--MENU-->',contentMenu));
+  fs.writeFileSync('./www/index.html',indexFile.replace('<!--INDEX-->',contentIndex));
 });
 
 gulp.task('install', ['git-check'], function() {
