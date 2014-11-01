@@ -10,7 +10,7 @@ return array(
     'yourdomain.com'=>array(
         'connectionString' => 'mysql:host=localhost;dbname=retalapp',
         'emulatePrepare' => true,
-        'username' => 'menteswe_root',
+        'username' => 'mydbusername',
         'password' => 'mypassword',
         // 'schemaCachingDuration' => (3600*24*8), // guarda los metadatas en cache
         'charset' => 'utf8',
