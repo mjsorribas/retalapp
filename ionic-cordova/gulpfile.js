@@ -35,21 +35,24 @@ gulp.task('retalapp', function() {
   // place code for your default task here
   var fs = require('fs');
   var files = fs.readdirSync('./www/js');
-  var contentRoutes = '';  
-  var contentMenu = '';  
-  var contentIndex = '';  
-  
+  var contentRoutes = '';
+  var contentMenu = '';
+  var contentIndex = '';
+
   var appFile = fs.readFileSync('./www/js/app.raw.js', 'utf8');
   var menuFile = fs.readFileSync('./www/menu.raw.html', 'utf8');
   var indexFile = fs.readFileSync('./www/index.raw.html', 'utf8');
-  
+
   for (i = 0; i < files.length; i++) {
+
+    // @TODO
+    // Make a file retalapp.json for config and send params
+    // And can install through bower
     gutil.log('retalapp', gutil.colors.cyan(files[i]));
     var existsRoutes = fs.existsSync('./www/js/'+files[i]+'/routes.js');
     if(existsRoutes){
         var data = fs.readFileSync('./www/js/'+files[i]+'/routes.js', 'utf8');
         contentRoutes+=data;
-        gutil.log('retalapp', gutil.colors.cyan(files[i]));
     }
     var existsMenu = fs.existsSync('./www/js/'+files[i]+'/menu.html');
     if(existsMenu){
@@ -61,6 +64,7 @@ gulp.task('retalapp', function() {
       var index = fs.readFileSync('./www/js/'+files[i]+'/index.html', 'utf8');
       contentIndex+=index;
     }
+
   }
 
   fs.writeFileSync('./www/js/app.js',appFile.replace('/*ROUTES*/',contentRoutes));
