@@ -8,8 +8,17 @@ We we're documenting, will be back soon
 # How to Install? #
 
 # Via composer create project #
+## 1. Run this command, this create and install dependencies ##
 ```
 composer create-project --prefer-dist retalapp/base yourprojectname
+```
+
+## 2. Import and configure core module's database ##
+Import sql file located on config directory
+Config your databases according to your host that you have your app
+```
+nameyourownproyect/app/config/retalapp.sql
+nameyourownproyect/app/config/database.php
 ```
 # Via clone this repo or fork it #
 ## 1. Clone this repo or make a Fork for start on github your project ##
