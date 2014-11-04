@@ -1,7 +1,7 @@
 {
     "require": {
         "php": ">=5.4.0",
-        "retalapp/core": "v0.*",
+        "retalapp/core": "*",
         "modules/landing": "*"
     }
 }
