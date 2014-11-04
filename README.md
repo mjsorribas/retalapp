@@ -9,7 +9,7 @@ We we're documenting, will be back soon
 
 # Via composer create project #
 ```
-composer create-project --prefer-dist retalapp/base base
+composer create-project --prefer-dist retalapp/base yourprojectname
 ```
 # Via clone this repo or fork it #
 ## 1. Clone this repo or make a Fork for start on github your project ##
