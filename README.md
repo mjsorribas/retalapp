@@ -1,27 +1,27 @@
 retalapp
 ========
 
-A workflow for make the programmer life more fun PHP, MySQL. Really fast Really fun!!
+A workflow to make the programmer's life more fun PHP, MySQL. Really fast Really fun!!
 
-We we're documenting, will be back soon
+We're documenting, we will be back soon
 
 # How to Install? #
 
 # Via composer create project #
-## 1. Run this command, this create and install dependencies ##
+## 1. Run this command, this will create and install dependencies ##
 ```
 composer create-project --prefer-dist retalapp/base yourprojectname
 ```
 
 ## 2. Import and configure core module's database ##
-Import sql file located on config directory
-Config your databases according to your host that you have your app
+Import sql file located in config directory
+Setup your databases according to the host where your app will run
 ```
 nameyourownproyect/app/config/retalapp.sql
 nameyourownproyect/app/config/database.php
 ```
 # Via clone this repo or fork it #
-## 1. Clone this repo or make a Fork for start on github your project ##
+## 1. Clone or Fork this repo to start your project from github  ##
 ```
 git clone https://github.com/gsalgadotoledo/retalapp.git nameyourownproyect
 ```
@@ -42,7 +42,7 @@ nameyourownproyect/app/config/database.php
 ```
 # Them open your browser #
 On http://localhost/nameyourownproyect/public
-Note: You neet to have your mod_rewrite apache enabled
+Note: You need to have your mod_rewrite apache enabled
 
 Role of programmer or PM, Settings might not see the admin
 Username: root@email.com, Password: root
@@ -63,7 +63,7 @@ sudo chmod -R 777 nameyourownproyect/public/assets
 sudo chmod -R 777 nameyourownproyect/public/uploads
 ```
 
-If you want to be more carefully use the group of apache process and give just 775
+If you want to be more careful use the group of apache process and just give 775
 ```
 sudo chown -R nameyouruser:wwworapachegroup nameyourownproyect
 
