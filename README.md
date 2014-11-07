@@ -21,7 +21,7 @@ nameyourownproyect/app/config/retalapp.sql
 nameyourownproyect/app/config/database.php
 ```
 # Via clone this repo or fork it #
-## 1. Clone or Fork this repo to start your project from github  ##
+## 1. Clone or Fork this repo to start your project on github  ##
 ```
 git clone https://github.com/gsalgadotoledo/retalapp.git nameyourownproyect
 ```
