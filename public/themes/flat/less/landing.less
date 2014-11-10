@@ -1,0 +1,191 @@
+@import "variables.less";
+@import "mixins.less";
+
+body {
+	overflow-x: hidden;
+}
+
+p {
+	font-size: 20px;
+}
+
+p.small {
+	font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+	color: @brand-success;
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+header {
+	text-align: center;
+	text-transform: uppercase;
+	color: @gray;
+
+	.container {
+		padding-top: 100px;
+		padding-bottom: 50px;
+	}
+}
+
+@media(min-width:768px) {
+	header {
+		.container {
+			padding-top: 200px;
+			padding-bottom: 100px;
+		}
+		.intro-text {
+			.name {
+				font-size: 4.75em;
+			}
+			.skills {
+				font-size: 1.75em;
+			}
+		}
+	}
+}
+
+@media(min-width:768px) {
+    .navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding 0.3s;
+        -moz-transition: padding 0.3s;
+        transition: padding 0.3s;
+	    .navbar-brand {
+	        font-size: 2em;
+	        -webkit-transition: all 0.3s;
+	        -moz-transition: all 0.3s;
+	        transition: all 0.3s;
+	    }        
+    }
+    .navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+		.navbar-brand {
+	        font-size: 1.5em;
+	    }    
+	}
+}
+
+.navbar {
+	text-transform: uppercase;
+	font-weight: 700;
+	a:focus {
+		outline: none;
+	}
+	.navbar-nav {
+		letter-spacing: 1px;
+		li {
+			a:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+.navbar-default,
+.navbar-inverse {
+	border: none;
+}
+
+section {
+    padding: 100px 0;
+    h2 {
+    	margin: 0;
+    	font-size: 3em;
+    }
+}
+
+section.success {
+	background: @brand-success;
+	color: white;
+}
+
+@media(max-width:767px) {
+	section {
+		padding: 75px 0;
+	}
+	section.first {
+		padding-top: 75px;
+	}
+}
+
+footer {
+	color: white;
+	h3 {
+		margin-bottom: 30px;
+	}
+	.footer-above {
+		padding-top: 50px;
+		background-color: @brand-primary;
+	}
+	.footer-col {
+		margin-bottom: 50px;
+	}
+	.footer-below {
+		padding: 25px 0;
+		background-color: darken(@brand-primary, 5%);
+	}
+}
+
+
+
+
+// ----------------------------- //
+// Base for landing style        //
+
+
+.scroll-top {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+    z-index: 1049;
+    .btn {
+    	font-size: 20px;
+	    width: 50px;
+	    height: 50px;
+	    border-radius: 100%;
+	    line-height: 28px;
+	    &:focus {
+	    	outline: none;
+	    }
+    }
+}
+
+// ----------------------------- //
+// Flatizing bootstrap           //
+
+.btn:focus,
+.btn:active,
+.btn.active {
+	outline: none;
+}
+
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+
+  // Set gradients for backgrounds
+  &.left {
+  	background-image: none;
+  }
+  &.right {
+    left: auto;
+    right: 0;
+ 	background-image: none;
+  }
+
+}
