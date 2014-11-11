@@ -42,6 +42,16 @@ return array(
         // 'showMenuFromAdmin'=>false,
         // 'labelMenu' => 'Users',
     ),
+
+    'translation'=>array(
+        'class'=>'core.modules.translation.TranslationModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+        'languages'=>array(
+            'en_us'=>'English',
+            'es'=>'Spanish',
+            'fr'=>'French',
+        ),
+    ),
     
     /**
      * Modulo para almacenar las variables de configuración 
