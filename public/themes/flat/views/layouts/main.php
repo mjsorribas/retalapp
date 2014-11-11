@@ -27,9 +27,94 @@
 <body id="page-top" class="index">
 
 
-    <?= r('landing')->getHeader(); ?>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?=$this->createUrl("/")?>"><?=r()->name?></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                  
+                    <li><a href="#info">info</a></li>
+                    <?php if(r()->user->isGuest):?>
+                    <li><a href="<?=$this->createUrl("/users/page/login")?>">Login</a></li>
+                    <?php else:?>
+                    <li><a href="<?=$this->createUrl("/users/page/logout")?>">Logout</a></li>
+                    <li><a href="<?=$this->createUrl("/users/page/profile")?>">Profile</a></li>
+                    <?php endif;?>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
     <?= $content; ?>
-    <?= r('landing')->getFooter(); ?>
+
+    <!-- Footer -->
+    <footer id="info" class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="test-center footer-col col-md-12">
+
+                        <h3>LET'S GET STARTED</h3>
+                    
+                        <p>(571) 999-999-999</p>
+                        
+                        <a href="mailto:info@yourcompani.com">info@yourcompani.com</a>
+                        
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://www.facebook.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" class="btn-social btn-outline"><i class="fa fa-fw fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.github.com" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Your Website 2014
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visble-sm">

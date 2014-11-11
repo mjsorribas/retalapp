@@ -16,9 +16,10 @@ return array(
         // y es para ocultar el menu lateral en el cms
         // 'showMenuFromAdmin'=>false,
     ),
-    'landing'=>array(
-        'class'=>'vendor.modules.landing.LandingModule',
-        //'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
+
+    'home'=>array(
+        'class'=>'application.modules.home.HomeModule',
+        // 'showMenuFromAdmin'=>false, // If you want hide your module on CMS left menu
     ),
 
     /**

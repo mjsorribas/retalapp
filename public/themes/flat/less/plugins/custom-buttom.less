@@ -12,9 +12,8 @@
 
 
 .btn-outline {
-	color: white;
 	font-size: 20px;
-	border: solid 2px white;
+	border: solid 2px @brand-success;
 	background: transparent;
 	transition: all 0.3s ease-in-out;
 	margin-top: 15px;
@@ -24,6 +23,6 @@
 	&.active {
 		color: @brand-success;
 		background: white;
-		border: solid 2px white;
+		border: solid 2px lighten(@brand-success, 5%);
 	}
 }

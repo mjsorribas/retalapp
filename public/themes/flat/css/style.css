@@ -7794,15 +7794,21 @@ header .container {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+header .header-title {
+  font-size: 5.75em;
+}
+header .header-text {
+  font-size: 3.75em;
+}
 @media (min-width: 768px) {
   header .container {
     padding-top: 200px;
     padding-bottom: 100px;
   }
-  header .intro-text .name {
+  header .intro-text .header-title {
     font-size: 4.75em;
   }
-  header .intro-text .skills {
+  header .intro-text .header-text {
     font-size: 1.75em;
   }
 }
@@ -7921,9 +7927,8 @@ footer .footer-below {
   line-height: 45px;
 }
 .btn-outline {
-  color: white;
   font-size: 20px;
-  border: solid 2px white;
+  border: solid 2px #18bc9c;
   background: transparent;
   transition: all 0.3s ease-in-out;
   margin-top: 15px;
@@ -7934,7 +7939,7 @@ footer .footer-below {
 .btn-outline.active {
   color: #18bc9c;
   background: white;
-  border: solid 2px white;
+  border: solid 2px #1bd3af;
 }
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
